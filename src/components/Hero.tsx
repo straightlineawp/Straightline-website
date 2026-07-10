@@ -4,66 +4,102 @@ import { ArrowRight, ShieldCheck, Gauge, BadgeCheck, HeadphonesIcon, MessageCirc
 
 const Hero = () => {
   return (
-    <div className="relative w-full min-h-[100dvh] lg:h-[100dvh] flex flex-col justify-center bg-white pb-[160px] lg:pb-0">
-      {/* Background Image - Absolute position covering right side but effectively full screen because it has machines */}
-      <div className="absolute inset-0 z-0 bg-[#f8f9fa] lg:bg-transparent">
+    <div className="relative w-full lg:h-[100dvh] flex flex-col justify-start lg:justify-center bg-white pb-[265px] lg:pb-0">
+      
+      {/* Mobile Image + Overlay Text Section */}
+      <div className="relative w-full lg:absolute lg:inset-0 lg:z-0 bg-[#f8f9fa] lg:bg-transparent flex flex-col">
+        {/* Background Image */}
         <img 
           src="/assets/Background.png" 
           alt="Straightline Aerial Work Platforms" 
-          className="w-full h-full lg:h-[135%] object-contain lg:object-fill object-top lg:object-center contrast-[1.05] translate-y-0 lg:translate-y-[calc(-15%+20px)] [clip-path:none] lg:[clip-path:inset(0_0_40px_0)]"
+          className="w-full h-auto lg:h-[135%] object-contain lg:object-fill object-top lg:object-center contrast-[1.05] translate-y-0 lg:translate-y-[calc(-15%+20px)] [clip-path:none] lg:[clip-path:inset(0_0_40px_0)]"
         />
-      </div>
-
-      {/* Main Content Container */}
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-[5vw] pt-[40px] pb-[120px] lg:pb-[180px] h-full flex flex-col justify-center">
         
-        {/* Left Side Content (approx 38% width) */}
-        <div className="w-full lg:w-[45%] xl:w-[38%] flex flex-col justify-center">
-          
+        {/* Mobile Dark Gradient */}
+        <div className="absolute inset-x-0 bottom-0 h-[85%] bg-gradient-to-t from-[#0f1b2e]/95 via-[#0f1b2e]/50 to-transparent lg:hidden pointer-events-none z-10"></div>
+        
+        {/* Mobile Text Overlay (Absolute) */}
+        <div className="absolute inset-0 z-20 w-full px-[5vw] flex flex-col justify-end pb-[16px] lg:hidden pointer-events-none">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mt-[75px] md:mt-[100px] lg:mt-[190px]"
+            className="pointer-events-auto"
           >
-            {/* Eyebrow */}
-            <div className="flex items-center gap-2 mb-2 md:mb-4 lg:mb-5">
-              <span className="w-4 md:w-6 h-[2px] bg-[#0B5ED7]"></span>
-              <p className="text-[9px] md:text-[10px] lg:text-[11px] tracking-[2px] font-medium text-[#4B5563] uppercase m-0 leading-none">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="w-4 h-[2px] bg-[#60A5FA]"></span>
+              <p className="text-[9px] tracking-[2px] font-medium text-white/90 uppercase m-0 leading-none">
                 India's Reliable Partner In
               </p>
             </div>
+            <h1 className="font-barlow font-semibold uppercase text-[28px] sm:text-[34px] leading-[1.1] tracking-[0.4px] text-left m-0">
+              <span className="block text-white">BETTER REACH.</span>
+              <span className="block text-[#60A5FA]">BUILT TO TRUST.</span>
+            </h1>
+            <p className="mt-[10px] text-[11.5px] font-[400] text-white/85 leading-[1.6] max-w-[420px]">
+              Straightline delivers advanced aerial work platforms that combine safety, performance, and reliability to help you work smarter and reach higher.
+            </p>
+          </motion.div>
+        </div>
+      </div>
 
-            {/* Heading */}
-            <h1 className="font-barlow font-semibold uppercase text-[36px] md:text-[44px] lg:text-[56px] leading-[1.1] lg:leading-none tracking-[0.4px] text-left m-0">
+      {/* Mobile Buttons Section (Immediately below image) */}
+      <div className="w-full px-[5vw] pt-4 pb-4 lg:hidden z-10 flex flex-col sm:flex-row gap-[12px]">
+        <Link 
+          to="/products" 
+          className="group flex items-center justify-center gap-2 bg-[#0B5ED7] hover:bg-[#094bb0] text-white h-[44px] w-full sm:w-[160px] rounded-[2px] text-[13px] font-bold transition-all duration-250 shadow-[0_4px_10px_rgba(11,94,215,0.2)]"
+        >
+          EXPLORE PRODUCTS <ArrowRight className="w-[14px] h-[14px] transition-transform group-hover:translate-x-1" />
+        </Link>
+        <a 
+          href="https://wa.me/919811803530" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group flex items-center justify-center gap-2 bg-white hover:bg-[#0B5ED7] text-[#0B5ED7] hover:text-white border-[2px] border-[#0B5ED7] h-[44px] w-full sm:w-[160px] rounded-[2px] text-[13px] font-bold transition-all duration-250"
+        >
+          <MessageCircle className="w-[14px] h-[14px] text-[#0B5ED7] group-hover:text-white transition-colors" /> TALK TO EXPERT
+        </a>
+      </div>
+
+      {/* Desktop Main Content Container */}
+      <div className="hidden lg:flex relative z-10 w-full max-w-[1600px] mx-auto px-[5vw] pb-[180px] h-full flex-col justify-center pointer-events-none">
+        <div className="w-[45%] xl:w-[38%] flex flex-col justify-center pointer-events-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mt-[190px]"
+          >
+            <div className="flex items-center gap-2 mb-5">
+              <span className="w-6 h-[2px] bg-[#0B5ED7]"></span>
+              <p className="text-[11px] tracking-[2px] font-medium text-[#4B5563] uppercase m-0 leading-none">
+                India's Reliable Partner In
+              </p>
+            </div>
+            <h1 className="font-barlow font-semibold uppercase text-[56px] leading-none tracking-[0.4px] text-left m-0">
               <span className="block text-[#1D2433]">BETTER REACH.</span>
               <span className="block text-[#0B5ED7]">BUILT TO TRUST.</span>
             </h1>
-
-            {/* Paragraph */}
-            <p className="mt-[16px] md:mt-[20px] lg:mt-[24px] text-[11px] md:text-[12px] lg:text-[14px] font-[400] text-[#4B5563] leading-[1.6] md:leading-[1.7] max-w-[420px] lg:max-w-[480px]">
+            <p className="mt-[24px] text-[14px] font-[400] text-[#4B5563] leading-[1.7] max-w-[480px]">
               Straightline delivers advanced aerial work platforms that combine safety, performance, and reliability to help you work smarter and reach higher.
             </p>
-
-            {/* Buttons */}
-            <div className="mt-[112px] lg:mt-[32px] flex flex-col sm:flex-row gap-[16px]">
+            <div className="mt-[32px] flex flex-row gap-[16px]">
               <Link 
                 to="/products" 
-                className="group flex items-center justify-center gap-2 bg-[#0B5ED7] hover:bg-[#094bb0] text-white h-[40px] lg:h-[48px] w-full sm:w-[160px] lg:w-[190px] rounded-[2px] text-[12px] lg:text-[14px] font-bold transition-all duration-250 hover:-translate-y-[2px] hover:shadow-[0_8px_16px_rgba(11,94,215,0.3)]"
+                className="group flex items-center justify-center gap-2 bg-[#0B5ED7] hover:bg-[#094bb0] text-white h-[48px] w-[190px] rounded-[2px] text-[14px] font-bold transition-all duration-250 hover:-translate-y-[2px] hover:shadow-[0_8px_16px_rgba(11,94,215,0.3)]"
               >
-                EXPLORE PRODUCTS <ArrowRight className="w-[14px] h-[14px] lg:w-[16px] lg:h-[16px] transition-transform group-hover:translate-x-1" />
+                EXPLORE PRODUCTS <ArrowRight className="w-[16px] h-[16px] transition-transform group-hover:translate-x-1" />
               </Link>
               <a 
                 href="https://wa.me/919811803530" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-2 bg-white hover:bg-[#0B5ED7] text-[#0B5ED7] hover:text-white border-[2px] border-[#0B5ED7] h-[40px] lg:h-[48px] w-full sm:w-[160px] lg:w-[190px] rounded-[2px] text-[12px] lg:text-[14px] font-bold transition-all duration-250 hover:-translate-y-[2px] hover:shadow-[0_8px_16px_rgba(11,94,215,0.2)]"
+                className="group flex items-center justify-center gap-2 bg-white hover:bg-[#0B5ED7] text-[#0B5ED7] hover:text-white border-[2px] border-[#0B5ED7] h-[48px] w-[190px] rounded-[2px] text-[14px] font-bold transition-all duration-250 hover:-translate-y-[2px] hover:shadow-[0_8px_16px_rgba(11,94,215,0.2)]"
               >
-                <MessageCircle className="w-[14px] h-[14px] lg:w-[16px] lg:h-[16px] text-[#0B5ED7] group-hover:text-white transition-colors" /> TALK TO EXPERT
+                <MessageCircle className="w-[16px] h-[16px] text-[#0B5ED7] group-hover:text-white transition-colors" /> TALK TO EXPERT
               </a>
             </div>
           </motion.div>
-
         </div>
       </div>
 
