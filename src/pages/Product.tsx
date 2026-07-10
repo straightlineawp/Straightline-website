@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getProductBySku, getProductSpecs, getAllProducts } from '../data/api';
+import { getProductBySku, getProductSpecs } from '../data/api';
 import { getAssetsForSku } from '../data/assetsMap';
 import { 
-  ArrowLeft, MessageCircle, Play, CheckCircle2, Download, Phone, FileText,
+  MessageCircle, Play, CheckCircle2, Phone, FileText,
   Settings, Zap, Maximize2, Building2, Factory, Plane, Warehouse, ShieldCheck, Ruler, Wrench, ChevronRight, Activity, Package, HardHat
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, ArrowRight, ShieldCheck, Factory, Wrench, FileCheck, 
   MapPin, Settings, Download, ZoomIn, Building2, HardHat, Warehouse, 
-  Plane, Train, Droplet, Sun, Briefcase, Zap, Shield, Globe, Award, MessageCircle, Maximize2, X
+  Plane, Train, Droplet, Sun, Zap, Shield, Globe, Award, MessageCircle, X
 } from 'lucide-react';
 
 const Honway = () => {

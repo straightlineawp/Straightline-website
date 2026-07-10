@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Zap, Droplet } from 'lucide-react';
-import { getCategoryBySlug, Subcategory } from '../data/api';
+import { getCategoryBySlug } from '../data/api';
 import { getAssetsForSku } from '../data/assetsMap';
 
 const ProductCard = ({ sku, height }: { sku: string, height?: number }) => {
-  const { folder, images } = getAssetsForSku(sku);
-  const coverImage = images.length > 0 ? `/assets/${folder}/${images[0]}` : '/assets/straight-line-logo.webp';
-  
+    
   return (
   <Link 
     to={`/product/${sku}`}

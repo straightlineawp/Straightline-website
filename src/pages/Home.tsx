@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, Activity, TrendingUp, Maximize, Target, Battery, Settings, BatteryCharging, Wrench, Shield, CheckCircle2, Package, Truck, Headset, ShieldCheck, Award, X } from 'lucide-react';
+import { ArrowRight, Maximize, Target, Settings, BatteryCharging, Wrench, CheckCircle2, Package, Truck, Headset, ShieldCheck, Award, X } from 'lucide-react';
 import Hero from '../components/Hero';
 import { getCategories } from '../data/api';
 import specsJson from '../../straightline_honway_specs.json';
 
-const FadeIn = ({ children, delay = 0, className = "" }) => {
+import { ReactNode } from "react";
+const FadeIn = ({ children, delay = 0, className = "" }: { children: ReactNode, delay?: number, className?: string }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   
