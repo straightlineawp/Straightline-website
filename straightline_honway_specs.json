@@ -1,0 +1,561 @@
+{
+  "brand": "Straightline",
+  "supplier": "Honway",
+  "sourceUrl": "https://www.honwaylifts.com/",
+  "legend": {
+    "matchType": {
+      "exact": "Straightline SKU number matches a real Honway model on the website exactly",
+      "closest": "No exact Honway model exists at this size; nearest available Honway model shown instead",
+      "estimated": "No Honway model exists at this size at all; specs extrapolated from Honway's own scaling pattern across neighboring models. NOT published by Honway — confirm before external use."
+    },
+    "note": "Honway model numbers (e.g. HWGTBZ16) correspond to Max Platform Height, not Max Working Height. Working height = platform height + ~2m."
+  },
+  "categories": [
+    {
+      "category": "Articulated Boom Lift",
+      "slug": "articulated-boom-lifts",
+      "subcategories": [
+        {
+          "type": "Diesel",
+          "powerType": "Diesel",
+          "models": [
+            {
+              "sku": "SL16A",
+              "honwayModel": "HWGTBZ16",
+              "matchType": "exact",
+              "maxWorkingHeightM": 18,
+              "maxPlatformHeightM": 16,
+              "maxLoadCapacityKg": 200,
+              "driverType": "Hydraulic motor drive",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / 35kw",
+              "platformRotationAngle": "±80°"
+            },
+            {
+              "sku": "SL21A",
+              "honwayModel": "HWGTBZ20",
+              "matchType": "closest",
+              "maxWorkingHeightM": 22,
+              "maxPlatformHeightM": 20,
+              "maxLoadCapacityKg": 230,
+              "driverType": "Hydraulic motor drive",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / 35kw",
+              "platformRotationAngle": "±80°"
+            },
+            {
+              "sku": "SL28A",
+              "honwayModel": "HWGTBZ26.8",
+              "matchType": "closest",
+              "maxWorkingHeightM": 28.8,
+              "maxPlatformHeightM": 26.8,
+              "maxLoadCapacityKg": 300,
+              "driverType": "Hydraulic motor drive 4x4x2",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / 36kw",
+              "platformRotationAngle": "±80°"
+            },
+            {
+              "sku": "SL34A",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 36,
+              "maxPlatformHeightM": 34,
+              "maxLoadCapacityKg": "300 (unrestricted) / 450 (restricted)",
+              "driverType": "Hydraulic motor drive 4x4x2",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / ~42kw",
+              "platformRotationAngle": "±80°",
+              "note": "No Honway product exists at this height. Estimated by extrapolating Honway's own scaling pattern from their 8m-28.8m diesel articulated range."
+            },
+            {
+              "sku": "SL52A",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 54,
+              "maxPlatformHeightM": 52,
+              "maxLoadCapacityKg": "300 (unrestricted) / 450 (restricted)",
+              "driverType": "Hydraulic motor drive 4x4x2",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / ~48kw",
+              "platformRotationAngle": "±80°",
+              "note": "No Honway product exists at this height. Estimated by extrapolating Honway's own scaling pattern; confirm engine power with Honway directly."
+            }
+          ]
+        },
+        {
+          "type": "Electric",
+          "powerType": "Electric",
+          "models": [
+            {
+              "sku": "SL16A-EV",
+              "honwayModel": "HWGTBZ16",
+              "matchType": "exact",
+              "maxWorkingHeightM": 18,
+              "maxPlatformHeightM": 16,
+              "maxLoadCapacityKg": 200,
+              "driverType": "Wheel motor drive",
+              "batteryCapacity": "Lead-acid 48V/360-400AH; Lithium 48V/360AH",
+              "charger": "48V/40A",
+              "platformRotationAngle": "±80°"
+            },
+            {
+              "sku": "SL21A-EV",
+              "honwayModel": "HWGTBZ20 / HWGTBZ22",
+              "matchType": "closest",
+              "maxWorkingHeightM": "22-24",
+              "maxPlatformHeightM": "20-22",
+              "maxLoadCapacityKg": 230,
+              "driverType": "Wheel motor drive",
+              "batteryCapacity": "Lead-acid 48V/480AH; Lithium 48V/500AH",
+              "charger": "48V/55A",
+              "platformRotationAngle": "±80°"
+            },
+            {
+              "sku": "SL28A-EV",
+              "honwayModel": "HWGTBZ26.8",
+              "matchType": "closest",
+              "maxWorkingHeightM": 28.8,
+              "maxPlatformHeightM": 26.8,
+              "maxLoadCapacityKg": "300 / 420",
+              "driverType": "Wheel motor drive AC 5.2kw/52V",
+              "batteryCapacity": "76.8V/560AH",
+              "charger": "220V/60A",
+              "platformRotationAngle": "±90°"
+            },
+            {
+              "sku": "SL34A-EV",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 36,
+              "maxPlatformHeightM": 34,
+              "maxLoadCapacityKg": "300 / 420",
+              "driverType": "Wheel motor drive AC 5.2kw/52V",
+              "batteryCapacity": "76.8V/650AH",
+              "charger": "220V/70A",
+              "platformRotationAngle": "±90°",
+              "note": "No Honway product exists at this height. Estimated from scaling pattern."
+            },
+            {
+              "sku": "SL52A-EV",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 54,
+              "maxPlatformHeightM": 52,
+              "maxLoadCapacityKg": "300 / 450",
+              "driverType": "Wheel motor drive AC 5.2kw/52V",
+              "batteryCapacity": "76.8V/750AH",
+              "charger": "220V/80A",
+              "platformRotationAngle": "±90°",
+              "note": "LOW CONFIDENCE ESTIMATE. A fully-electric 52m articulating boom lift is unusual industry-wide due to power/energy demands at that height. Verify with Honway whether this product is realistic before using these numbers, or whether diesel is the only option at 52m."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Telescopic Boom Lift",
+      "slug": "telescopic-boom-lifts",
+      "subcategories": [
+        {
+          "type": "Diesel",
+          "powerType": "Diesel",
+          "models": [
+            {
+              "sku": "SL16T",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 18,
+              "maxPlatformHeightM": 16,
+              "maxLoadCapacityKg": 200,
+              "driverType": "Hydraulic motor drive",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / 35kw",
+              "platformRotationAngle": "±80°",
+              "note": "Honway's site lists only one telescopic model (26.8m platform height). Estimated using the articulated line's specs at matching platform height, since the two boom types share identical specs where they overlap (26.8m)."
+            },
+            {
+              "sku": "SL21T",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 23,
+              "maxPlatformHeightM": 21,
+              "maxLoadCapacityKg": 240,
+              "driverType": "Hydraulic motor drive",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / 35kw",
+              "platformRotationAngle": "±80°",
+              "note": "No Honway telescopic product at this height. Estimated."
+            },
+            {
+              "sku": "SL28T",
+              "honwayModel": "HWGTBZ26.8",
+              "matchType": "closest",
+              "maxWorkingHeightM": 28.8,
+              "maxPlatformHeightM": 26.8,
+              "maxLoadCapacityKg": 300,
+              "driverType": "4x4x2 Hydraulic drive",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / 36kw",
+              "platformRotationAngle": "±80°"
+            },
+            {
+              "sku": "SL34T",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 36,
+              "maxPlatformHeightM": 34,
+              "maxLoadCapacityKg": "300 / 450",
+              "driverType": "4x4x2 Hydraulic drive",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / ~42kw",
+              "platformRotationAngle": "±80°",
+              "note": "No Honway telescopic product at this height. Estimated."
+            },
+            {
+              "sku": "SL52T",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 54,
+              "maxPlatformHeightM": 52,
+              "maxLoadCapacityKg": "300 / 450",
+              "driverType": "4x4x2 Hydraulic drive",
+              "dieselEngineModel": "490",
+              "dieselEnginePower": "4CYL / ~48kw",
+              "platformRotationAngle": "±80°",
+              "note": "No Honway telescopic product at this height. Estimated."
+            }
+          ]
+        },
+        {
+          "type": "Electric",
+          "powerType": "Electric",
+          "models": [
+            {
+              "sku": "SL16T-EV",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 18,
+              "maxPlatformHeightM": 16,
+              "maxLoadCapacityKg": 200,
+              "driverType": "Wheel motor drive",
+              "batteryCapacity": "Lead-acid 48V/360-400AH; Lithium 48V/360AH",
+              "charger": "48V/40A",
+              "platformRotationAngle": "±80°",
+              "note": "Original source file flagged this SKU as 'Submitted as SL16A-EV — corrected to match telescopic naming pattern.' No Honway telescopic product exists at 16m; estimated from articulated line at matching platform height."
+            },
+            {
+              "sku": "SL21T-EV",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": "23-24",
+              "maxPlatformHeightM": 21,
+              "maxLoadCapacityKg": 230,
+              "driverType": "Wheel motor drive",
+              "batteryCapacity": "Lead-acid 48V/480AH; Lithium 48V/500AH",
+              "charger": "48V/55A",
+              "platformRotationAngle": "±80°",
+              "note": "No Honway telescopic product at this height. Estimated."
+            },
+            {
+              "sku": "SL28T-EV",
+              "honwayModel": "HWGTBZ26.8",
+              "matchType": "closest",
+              "maxWorkingHeightM": 28.8,
+              "maxPlatformHeightM": 26.8,
+              "maxLoadCapacityKg": "300 / 420",
+              "driverType": "Wheel motor drive AC 5.2kw/52V",
+              "batteryCapacity": "76.8V/560AH",
+              "charger": "220V/60A",
+              "platformRotationAngle": "±90°"
+            },
+            {
+              "sku": "SL34T-EV",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 36,
+              "maxPlatformHeightM": 34,
+              "maxLoadCapacityKg": "300 / 420",
+              "driverType": "Wheel motor drive AC 5.2kw/52V",
+              "batteryCapacity": "76.8V/650AH",
+              "charger": "220V/70A",
+              "platformRotationAngle": "±90°",
+              "note": "No Honway telescopic product at this height. Estimated."
+            },
+            {
+              "sku": "SL52T-EV",
+              "honwayModel": null,
+              "matchType": "estimated",
+              "maxWorkingHeightM": 54,
+              "maxPlatformHeightM": 52,
+              "maxLoadCapacityKg": "300 / 450",
+              "driverType": "Wheel motor drive AC 5.2kw/52V",
+              "batteryCapacity": "76.8V/750AH",
+              "charger": "220V/80A",
+              "platformRotationAngle": "±90°",
+              "note": "LOW CONFIDENCE ESTIMATE. A fully-electric 52m telescopic boom lift is unusual industry-wide. Verify with Honway whether this product is realistic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Scissor Lift",
+      "slug": "scissor-lifts",
+      "subcategories": [
+        {
+          "type": "Electric Self-Propelled",
+          "powerType": "Electric",
+          "terrain": "Indoor / Smooth surface",
+          "platformRotationAngle": "Not applicable — Honway does not offer platform rotation as a feature on any scissor lift",
+          "models": [
+            {
+              "sku": "SLGTJZ06",
+              "honwayModel": "HWGTJZ06",
+              "matchType": "exact",
+              "maxWorkingHeightM": 8.0,
+              "maxPlatformHeightM": 6.0,
+              "safeWorkingLoadKg": 500,
+              "liftingDrivingMotor": "24V / 3.3kw",
+              "batteryCapacity": "Lead-acid, maintenance-free",
+              "charger": "24V/30A"
+            },
+            {
+              "sku": "SLGTJZ08",
+              "honwayModel": "HWGTJZ08",
+              "matchType": "exact",
+              "maxWorkingHeightM": 10.0,
+              "maxPlatformHeightM": 8.0,
+              "safeWorkingLoadKg": 450,
+              "liftingDrivingMotor": "24V / 3.3kw",
+              "batteryCapacity": "Lead-acid, maintenance-free",
+              "charger": "24V/30A"
+            },
+            {
+              "sku": "SLGTJZ10",
+              "honwayModel": "HWGTJZ10",
+              "matchType": "exact",
+              "maxWorkingHeightM": 12.0,
+              "maxPlatformHeightM": 10.0,
+              "safeWorkingLoadKg": 320,
+              "liftingDrivingMotor": "24V / 4.5kw",
+              "batteryCapacity": "Lead-acid, maintenance-free",
+              "charger": "24V/30A"
+            },
+            {
+              "sku": "SLGTJZ12",
+              "honwayModel": "HWGTJZ12",
+              "matchType": "exact",
+              "maxWorkingHeightM": 13.8,
+              "maxPlatformHeightM": 11.8,
+              "safeWorkingLoadKg": 320,
+              "liftingDrivingMotor": "24V / 4.5kw",
+              "batteryCapacity": "Lead-acid, maintenance-free",
+              "charger": "24V/30A"
+            },
+            {
+              "sku": "SLGTJZ14",
+              "honwayModel": "HWGTJZ14",
+              "matchType": "exact",
+              "maxWorkingHeightM": 15.7,
+              "maxPlatformHeightM": 13.7,
+              "safeWorkingLoadKg": 227,
+              "liftingDrivingMotor": "24V / 4.5kw",
+              "batteryCapacity": "Lead-acid, maintenance-free",
+              "charger": "24V/30A"
+            }
+          ]
+        },
+        {
+          "type": "Crawler Scissor Lift",
+          "powerType": "Electric (crawler-mounted)",
+          "terrain": "Uneven / sloped ground",
+          "platformRotationAngle": "Not applicable — Honway does not offer platform rotation as a feature on any scissor lift",
+          "note": "Corrected powerType from 'Electric / Diesel (crawler-mounted)' — Honway's crawler scissor lift line is electric only; no diesel crawler scissor lift is offered.",
+          "models": [
+            {
+              "sku": "SLZTLD-GTJZ10",
+              "honwayModel": "HWZTLD-GTJZ10",
+              "matchType": "exact",
+              "maxWorkingHeightM": 12.0,
+              "maxPlatformHeightM": 10.0,
+              "safeWorkingLoadKg": 320,
+              "travelingMotor": "2x 5kw / DC48V",
+              "liftingMotor": "DC48V / 4.5kw",
+              "batteryCapacity": "Lead-acid 8x6V/200Ah",
+              "charger": "48V/30A"
+            },
+            {
+              "sku": "SLZTLD-GTJZ12",
+              "honwayModel": "HWZTLD-GTJZ12",
+              "matchType": "exact",
+              "maxWorkingHeightM": 13.8,
+              "maxPlatformHeightM": 11.8,
+              "safeWorkingLoadKg": 320,
+              "travelingMotor": "2x 5kw / DC48V",
+              "liftingMotor": "DC48V / 4.5kw",
+              "batteryCapacity": "Lead-acid 8x6V/200Ah",
+              "charger": "48V/30A"
+            },
+            {
+              "sku": "SLZTLD-GTJZ14",
+              "honwayModel": "HWZTLD-GTJZ14",
+              "matchType": "exact",
+              "maxWorkingHeightM": 15.7,
+              "maxPlatformHeightM": 13.7,
+              "safeWorkingLoadKg": 230,
+              "travelingMotor": "2x 5kw / DC48V",
+              "liftingMotor": "DC48V / 4.5kw",
+              "batteryCapacity": "Lead-acid 8x6V/260Ah",
+              "charger": "48V/35A"
+            }
+          ]
+        },
+        {
+          "type": "Rough Terrain Scissor Lift",
+          "powerType": "Electric",
+          "terrain": "Outdoor / Construction sites",
+          "platformRotationAngle": "Not applicable — Honway does not offer platform rotation as a feature on any scissor lift",
+          "note": "Corrected powerType from 'Diesel and Electric variants' to 'Electric'. Honway does not sell a diesel rough terrain scissor lift — every model page is titled 'diesel/electric' but every spec table only shows electric drive/lift motor specs. No diesel engine model or power is published for this line.",
+          "models": [
+            {
+              "sku": "SLYY-GTJZ10",
+              "honwayModel": "HWYY-GTJZ10",
+              "matchType": "exact",
+              "maxWorkingHeightM": 12.0,
+              "maxPlatformHeightM": 10.0,
+              "safeWorkingLoadKg": 400,
+              "travelingMotor": "48V / 4.5kw",
+              "liftingMotor": "48V / 4kw",
+              "batteryCapacity": "Lead-acid 8x6V/260Ah",
+              "charger": "48V/30A"
+            },
+            {
+              "sku": "SLYY-GTJZ12",
+              "honwayModel": "HWYY-GTJZ12",
+              "matchType": "exact",
+              "maxWorkingHeightM": 14.0,
+              "maxPlatformHeightM": 12.0,
+              "safeWorkingLoadKg": 320,
+              "travelingMotor": "48V / 4.5kw",
+              "liftingMotor": "48V / 4kw",
+              "batteryCapacity": "Lead-acid 8x6V/260Ah",
+              "charger": "48V/30A"
+            },
+            {
+              "sku": "SLYY-GTJZ14",
+              "honwayModel": "HWYY-GTJZ14",
+              "matchType": "exact",
+              "maxWorkingHeightM": 14.0,
+              "maxPlatformHeightM": 12.0,
+              "safeWorkingLoadKg": 280,
+              "travelingMotor": "48V / 4.5kw",
+              "liftingMotor": "48V / 4kw",
+              "batteryCapacity": "Lead-acid 8x6V/260Ah",
+              "charger": "48V/30A"
+            },
+            {
+              "sku": "SLYY-GTJZ16",
+              "honwayModel": "HWYY-GTJZ16",
+              "matchType": "exact",
+              "maxWorkingHeightM": 16.0,
+              "maxPlatformHeightM": 14.0,
+              "safeWorkingLoadKg": 320,
+              "travelingMotor": "48V / 4.5kw",
+              "liftingMotor": "48V / 4kw",
+              "batteryCapacity": "Lead-acid 8x6V/260Ah",
+              "charger": "48V/30A"
+            },
+            {
+              "sku": "SLYY-GTJZ20",
+              "honwayModel": "HWYY-GTJZ20",
+              "matchType": "exact",
+              "maxWorkingHeightM": 22.0,
+              "maxPlatformHeightM": 20.0,
+              "safeWorkingLoadKg": 500,
+              "travelingMotor": "4x 32VAC / 1.5kw",
+              "liftingMotor": "48V / 5kw",
+              "batteryCapacity": "Lead-acid 24x2V/330Ah",
+              "charger": "48V/40A"
+            }
+          ]
+        },
+        {
+          "type": "Mini Electric Scissor Lift",
+          "powerType": "Electric",
+          "terrain": "Indoor / Low ceiling height work",
+          "platformRotationAngle": "Not applicable — Honway does not offer platform rotation as a feature on any scissor lift",
+          "models": [
+            {
+              "sku": "SLGTJZ03",
+              "honwayModel": "HWGTJZ03",
+              "matchType": "exact",
+              "maxWorkingHeightM": 5.0,
+              "maxPlatformHeightM": 3.0,
+              "safeWorkingLoadKg": 260,
+              "liftingDrivingMotor": "24V / 1.6kw",
+              "batteryCapacity": "Lead-acid 2x12V/80Ah",
+              "charger": "24V/10A"
+            },
+            {
+              "sku": "SLGTJZ04",
+              "honwayModel": "HWGTJZ04",
+              "matchType": "exact",
+              "maxWorkingHeightM": 6.0,
+              "maxPlatformHeightM": 4.0,
+              "safeWorkingLoadKg": 230,
+              "liftingDrivingMotor": "24V / 1.6kw",
+              "batteryCapacity": "Lead-acid 2x12V/80Ah",
+              "charger": "24V/10A"
+            },
+            {
+              "sku": "SLGTJZ04.5",
+              "honwayModel": "HWGTJZ04-B",
+              "matchType": "exact",
+              "maxWorkingHeightM": 6.5,
+              "maxPlatformHeightM": 4.5,
+              "safeWorkingLoadKg": 230,
+              "liftingDrivingMotor": "24V / 1.6kw",
+              "batteryCapacity": "Lead-acid 2x12V/80Ah",
+              "charger": "24V/10A",
+              "note": "Original source file flagged this SKU as 'Submitted as SL16A-EV — corrected to match telescopic naming pattern, please verify against Honway docs.' Confirmed: Honway's actual model for 4.5m platform height is HWGTJZ04-B; the note's correction is accurate."
+            },
+            {
+              "sku": "SLGTJZ05.6",
+              "honwayModel": "HWGTJZ5.6",
+              "matchType": "exact",
+              "maxWorkingHeightM": 7.6,
+              "maxPlatformHeightM": 5.6,
+              "safeWorkingLoadKg": 230,
+              "liftingDrivingMotor": "24V / 1.6kw",
+              "batteryCapacity": "Lead-acid 2x12V/100Ah",
+              "charger": "24V/15A"
+            },
+            {
+              "sku": "SLGTJZ06A",
+              "honwayModel": "HWGTJZ06A",
+              "matchType": "exact",
+              "maxWorkingHeightM": 8.0,
+              "maxPlatformHeightM": 6.0,
+              "safeWorkingLoadKg": 230,
+              "liftingDrivingMotor": "24V / 3.3kw",
+              "batteryCapacity": "Lead-acid 4x6V/200Ah",
+              "charger": "24V/30A"
+            },
+            {
+              "sku": "SLGTJZ08A",
+              "honwayModel": "HWGTJZ08A",
+              "matchType": "exact",
+              "maxWorkingHeightM": 10.0,
+              "maxPlatformHeightM": 8.0,
+              "safeWorkingLoadKg": 230,
+              "liftingDrivingMotor": "24V / 3.3kw",
+              "batteryCapacity": "Lead-acid 4x6V/200Ah",
+              "charger": "24V/30A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

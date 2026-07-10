@@ -1,0 +1,115 @@
+{
+  "brand": "Straightline",
+  "supplier": "Honway",
+  "categories": [
+    {
+      "category": "Articulated Boom Lift",
+      "slug": "articulated-boom-lifts",
+      "subcategories": [
+        {
+          "type": "Diesel",
+          "powerType": "Diesel",
+          "models": [
+            { "sku": "SL16A", "workingHeightM": 16 },
+            { "sku": "SL21A", "workingHeightM": 21 },
+            { "sku": "SL28A", "workingHeightM": 28 },
+            { "sku": "SL34A", "workingHeightM": 34 },
+            { "sku": "SL52A", "workingHeightM": 52 }
+          ]
+        },
+        {
+          "type": "Electric",
+          "powerType": "Electric",
+          "models": [
+            { "sku": "SL16A-EV", "workingHeightM": 16 },
+            { "sku": "SL21A-EV", "workingHeightM": 21 },
+            { "sku": "SL28A-EV", "workingHeightM": 28 },
+            { "sku": "SL34A-EV", "workingHeightM": 34 },
+            { "sku": "SL52A-EV", "workingHeightM": 52 }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Telescopic Boom Lift",
+      "slug": "telescopic-boom-lifts",
+      "subcategories": [
+        {
+          "type": "Diesel",
+          "powerType": "Diesel",
+          "models": [
+            { "sku": "SL16T", "workingHeightM": 16 },
+            { "sku": "SL21T", "workingHeightM": 21 },
+            { "sku": "SL28T", "workingHeightM": 28 },
+            { "sku": "SL34T", "workingHeightM": 34 },
+            { "sku": "SL52T", "workingHeightM": 52 }
+          ]
+        },
+        {
+          "type": "Electric",
+          "powerType": "Electric",
+          "models": [
+            { "sku": "SL16T-EV", "workingHeightM": 16, "note": "Submitted as SL16A-EV — corrected to match telescopic naming pattern, please verify against Honway docs" },
+            { "sku": "SL21T-EV", "workingHeightM": 21 },
+            { "sku": "SL28T-EV", "workingHeightM": 28 },
+            { "sku": "SL34T-EV", "workingHeightM": 34 },
+            { "sku": "SL52T-EV", "workingHeightM": 52 }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Scissor Lift",
+      "slug": "scissor-lifts",
+      "subcategories": [
+        {
+          "type": "Electric Self-Propelled",
+          "powerType": "Electric",
+          "terrain": "Indoor / Smooth surface",
+          "models": [
+            { "sku": "SLGTJZ06", "workingHeightM": 6 },
+            { "sku": "SLGTJZ08", "workingHeightM": 8 },
+            { "sku": "SLGTJZ10", "workingHeightM": 10 },
+            { "sku": "SLGTJZ12", "workingHeightM": 12 },
+            { "sku": "SLGTJZ14", "workingHeightM": 14 }
+          ]
+        },
+        {
+          "type": "Crawler Scissor Lift",
+          "powerType": "Electric / Diesel (crawler-mounted)",
+          "terrain": "Uneven / sloped ground",
+          "models": [
+            { "sku": "SLZTLD-GTJZ10", "workingHeightM": 10 },
+            { "sku": "SLZTLD-GTJZ12", "workingHeightM": 12 },
+            { "sku": "SLZTLD-GTJZ14", "workingHeightM": 14 }
+          ]
+        },
+        {
+          "type": "Rough Terrain Scissor Lift",
+          "powerType": "Electric",
+          "terrain": "Outdoor / Construction sites",
+          "models": [
+            { "sku": "SLYY-GTJZ10", "workingHeightM": 10 },
+            { "sku": "SLYY-GTJZ12", "workingHeightM": 12 },
+            { "sku": "SLYY-GTJZ14", "workingHeightM": 14 },
+            { "sku": "SLYY-GTJZ16", "workingHeightM": 16 },
+            { "sku": "SLYY-GTJZ20", "workingHeightM": 20 }
+          ]
+        },
+        {
+          "type": "Mini Electric Scissor Lift",
+          "powerType": "Electric",
+          "terrain": "Indoor / Low ceiling height work",
+          "models": [
+            { "sku": "SLGTJZ03", "workingHeightM": 3 },
+            { "sku": "SLGTJZ04", "workingHeightM": 4 },
+            { "sku": "SLGTJZ04.5", "workingHeightM": 4.5 },
+            { "sku": "SLGTJZ05.6", "workingHeightM": 5.6 },
+            { "sku": "SLGTJZ06A", "workingHeightM": 6 },
+            { "sku": "SLGTJZ08A", "workingHeightM": 8 }
+          ]
+        }
+      ]
+    }
+  ]
+}
