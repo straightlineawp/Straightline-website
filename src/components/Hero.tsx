@@ -9,10 +9,18 @@ const Hero = () => {
       {/* Mobile Image + Overlay Text Section */}
       <div className="relative w-full lg:absolute lg:inset-0 lg:z-0 bg-[#f8f9fa] lg:bg-transparent flex flex-col">
         {/* Background Image */}
+        {/* Desktop Background Image */}
         <img 
           src="/assets/Background.png" 
-          alt="Straightline Aerial Work Platforms" 
-          className="w-full h-auto lg:h-[135%] object-contain lg:object-fill object-top lg:object-center contrast-[1.05] translate-y-0 lg:translate-y-[calc(-15%+20px)] [clip-path:none] lg:[clip-path:inset(0_0_40px_0)]"
+          alt="Straightline Aerial Work Platforms - Desktop" 
+          className="hidden lg:block w-full h-[135%] object-fill object-center contrast-[1.05] translate-y-[calc(-15%+20px)] [clip-path:inset(0_0_40px_0)]"
+        />
+        
+        {/* Mobile Background Image */}
+        <img 
+          src="/assets/backgroung%20mobile.png" 
+          alt="Straightline Aerial Work Platforms - Mobile" 
+          className="block lg:hidden w-full h-auto object-contain object-top contrast-[1.05] translate-y-0 [clip-path:none]"
         />
         
         {/* Mobile Dark Gradient */}

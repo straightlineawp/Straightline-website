@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, ArrowRight, ShieldCheck, Factory, Wrench, FileCheck, 
-  MapPin, Settings, Download, ZoomIn, Building2, HardHat, Warehouse, 
+  MapPin, Settings, ZoomIn, Building2, HardHat, Warehouse,
   Plane, Train, Droplet, Sun, Zap, Shield, Globe, Award, MessageCircle, X
 } from 'lucide-react';
 
@@ -167,7 +167,6 @@ const Honway = () => {
                 <ul className="space-y-6 mb-10">
                   {[
                     "Official Manufacturer Authorization",
-                    "Valid from June 1, 2026",
                     "Authorized for Sales & Distribution Across India",
                     "Issued by Honway Intelligent Manufacturing Technology Co., Ltd."
                   ].map((item, i) => (
@@ -179,12 +178,9 @@ const Honway = () => {
                 </ul>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <button onClick={() => setIsCertOpen(true)} className="flex-1 bg-[#F97316] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#EA580C] transition-colors flex items-center justify-center gap-2">
+                  <button onClick={() => setIsCertOpen(true)} className="w-full bg-[#F97316] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#EA580C] transition-colors flex items-center justify-center gap-2">
                     <ZoomIn size={20} /> View Full Certificate
                   </button>
-                  <a href="/assets/certificate-new.jpg" download className="flex-1 bg-white/10 text-white border border-white/20 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-colors flex items-center justify-center gap-2">
-                    <Download size={20} /> Download
-                  </a>
                 </div>
 
                 <p className="text-sm text-blue-200/60 leading-relaxed border-t border-white/10 pt-6">

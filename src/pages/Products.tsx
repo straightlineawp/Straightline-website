@@ -91,7 +91,7 @@ const Products = () => {
           <div className="flex lg:grid lg:grid-cols-3 gap-[12px] lg:gap-6 px-4 lg:px-0 pb-2 lg:pb-0 overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] [-webkit-overflow-scrolling:touch]">
             {categories.map((cat, i) => {
               const isScissor = cat.slug === 'scissor-lifts';
-              const badgeText = isScissor ? "Electric only" : "Diesel and electric";
+              const badgeText = isScissor ? "Diesel and Electric" : "Diesel and electric";
               const badgeColors = isScissor ? "bg-green-100 text-green-800 border-green-200" : "bg-blue-100 text-blue-800 border-blue-200";
               
               let desc = "";
@@ -101,13 +101,13 @@ const Products = () => {
               
               if (cat.slug === 'articulated-boom-lifts') {
                 desc = "Versatile lifts with up-and-over capability, perfect for complex infrastructure and maintenance tasks. Available in both diesel and electric drivetrains.";
-                spec1 = "18m - 28.8m";
-                spec2 = "Up to 300kg";
+                spec1 = "16m - 34m";
+                spec2 = "Up to 420kg";
                 spec3 = "±80°/±90°";
               } else if (cat.slug === 'telescopic-boom-lifts') {
                 desc = "Engineered for maximum horizontal reach and heavy-duty construction applications. Available in high-performance diesel or zero-emission electric variants.";
-                spec1 = "18m - 28.8m";
-                spec2 = "Up to 300kg";
+                spec1 = "16m - 34m";
+                spec2 = "Up to 420kg";
                 spec3 = "±80°/±90°";
               } else {
                 desc = "Highly stable vertical lifting platforms ideal for indoor facility management, warehousing, and smooth surface operations. Powered by clean, quiet electric motors.";

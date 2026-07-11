@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getProductBySku, getProductSpecs } from '../data/api';
 import { getAssetsForSku } from '../data/assetsMap';
@@ -13,13 +13,34 @@ const Product = () => {
   const [isImperial, setIsImperial] = useState(false);
   const [activeMedia, setActiveMedia] = useState<number>(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: '', company: '', phone: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting && videoRef.current) {
+            videoRef.current.pause();
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [activeMedia]);
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hi, I'm interested in the ${sku} model.
 Name: ${formData.name}
-Company: ${formData.company}
 Phone: ${formData.phone}
 Email: ${formData.email}
 Message: ${formData.message}`;
@@ -236,6 +257,7 @@ Message: ${formData.message}`;
                 >
                   {mediaList[activeMedia].type === 'video' ? (
                     <motion.video 
+                      ref={videoRef}
                       key="video" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                       src={mediaList[activeMedia].url} 
                       autoPlay 
@@ -336,7 +358,7 @@ Message: ${formData.message}`;
             {/* Technical Specifications */}
             <section className="bg-white p-8 lg:p-10 rounded-[20px] shadow-sm border border-gray-200" id="specs">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 pb-6 border-b border-gray-100">
-                <h2 className="text-2xl font-[800] text-[#1E293B]">Technical Specifications</h2>
+                <h2 className="text-3xl lg:text-4xl font-[900] text-[#0F4AA1] tracking-tight uppercase">Technical Specifications</h2>
                 
                 {/* Metric/Imperial Segmented Control */}
                 <div className="flex items-center bg-gray-100 p-1 rounded-xl w-fit">
@@ -349,15 +371,15 @@ Message: ${formData.message}`;
                 {/* Performance Card */}
                 {specCategories.Performance.length > 0 && (
                   <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center gap-3">
-                      <Activity size={20} className="text-[#0F4AA1]"/>
-                      <h3 className="font-bold text-[#1E293B]">Performance</h3>
+                    <div className="bg-[#f8f9fa] px-6 py-5 border-b border-gray-200 flex items-center gap-3">
+                      <Activity size={22} className="text-[#0F4AA1]"/>
+                      <h3 className="font-[800] text-[#1E293B] text-[17px] tracking-wide uppercase">Performance</h3>
                     </div>
                     <div className="divide-y divide-gray-100">
                       {specCategories.Performance.map((s, i) => (
-                        <div key={i} className="flex justify-between items-center px-6 py-4 hover:bg-gray-50 transition-colors">
-                          <span className="text-gray-500 text-[14px] font-medium">{s.label}</span>
-                          <span className="font-bold text-[#1E293B] text-right">{s.value}</span>
+                        <div key={i} className="grid grid-cols-[1fr_1fr] sm:grid-cols-[240px_1fr] gap-4 items-center px-6 py-4 hover:bg-gray-50 transition-colors">
+                          <span className="text-[#64748b] text-[15px] font-semibold tracking-wide">{s.label}</span>
+                          <span className="font-[800] text-[#0f172a] text-[15px]">{s.value}</span>
                         </div>
                       ))}
                     </div>
@@ -367,15 +389,15 @@ Message: ${formData.message}`;
                 {/* Dimensions Card */}
                 {specCategories.Dimensions.length > 0 && (
                   <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center gap-3">
-                      <Ruler size={20} className="text-[#0F4AA1]"/>
-                      <h3 className="font-bold text-[#1E293B]">Dimensions</h3>
+                    <div className="bg-[#f8f9fa] px-6 py-5 border-b border-gray-200 flex items-center gap-3">
+                      <Ruler size={22} className="text-[#0F4AA1]"/>
+                      <h3 className="font-[800] text-[#1E293B] text-[17px] tracking-wide uppercase">Dimensions</h3>
                     </div>
                     <div className="divide-y divide-gray-100">
                       {specCategories.Dimensions.map((s, i) => (
-                        <div key={i} className="flex justify-between items-center px-6 py-4 hover:bg-gray-50 transition-colors">
-                          <span className="text-gray-500 text-[14px] font-medium">{s.label}</span>
-                          <span className="font-bold text-[#1E293B] text-right">{s.value}</span>
+                        <div key={i} className="grid grid-cols-[1fr_1fr] sm:grid-cols-[240px_1fr] gap-4 items-center px-6 py-4 hover:bg-gray-50 transition-colors">
+                          <span className="text-[#64748b] text-[15px] font-semibold tracking-wide">{s.label}</span>
+                          <span className="font-[800] text-[#0f172a] text-[15px]">{s.value}</span>
                         </div>
                       ))}
                     </div>
@@ -385,20 +407,37 @@ Message: ${formData.message}`;
                 {/* Power Card */}
                 {specCategories.Power.length > 0 && (
                   <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center gap-3">
-                      <Zap size={20} className="text-[#0F4AA1]"/>
-                      <h3 className="font-bold text-[#1E293B]">Power & Drive</h3>
+                    <div className="bg-[#f8f9fa] px-6 py-5 border-b border-gray-200 flex items-center gap-3">
+                      <Zap size={22} className="text-[#0F4AA1]"/>
+                      <h3 className="font-[800] text-[#1E293B] text-[17px] tracking-wide uppercase">Power & Drive</h3>
                     </div>
                     <div className="divide-y divide-gray-100">
                       {specCategories.Power.map((s, i) => (
-                        <div key={i} className="flex justify-between items-center px-6 py-4 hover:bg-gray-50 transition-colors">
-                          <span className="text-gray-500 text-[14px] font-medium">{s.label}</span>
-                          <span className="font-bold text-[#1E293B] text-right">{s.value}</span>
+                        <div key={i} className="grid grid-cols-[1fr_1fr] sm:grid-cols-[240px_1fr] gap-4 items-center px-6 py-4 hover:bg-gray-50 transition-colors">
+                          <span className="text-[#64748b] text-[15px] font-semibold tracking-wide">{s.label}</span>
+                          <span className="font-[800] text-[#0f172a] text-[15px]">{s.value}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
+              </div>
+
+              {/* Complete Specifications Note */}
+              <div className="mt-8 bg-blue-50/50 border border-blue-100 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                <div>
+                  <h4 className="text-lg font-bold text-[#0F4AA1] mb-1">Need the complete technical specifications?</h4>
+                  <p className="text-gray-600 text-[15px]">Contact us on WhatsApp for the full specification sheet and expert assistance.</p>
+                </div>
+                <a 
+                  href={`https://wa.me/919811803530?text=Hi, I would like the complete technical specification sheet for the ${sku} model.`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-lg font-bold text-[15px] flex items-center justify-center gap-2 whitespace-nowrap transition-colors shadow-sm"
+                >
+                  <MessageCircle size={20} />
+                  WhatsApp Us
+                </a>
               </div>
             </section>
           </div>
@@ -462,9 +501,8 @@ Message: ${formData.message}`;
             <p className="text-gray-500 text-lg mb-8 max-w-lg">Get a free consultation and customized quote for the {sku}. Our experts will help you configure the perfect machine for your project.</p>
             
             <form className="space-y-4" onSubmit={handleWhatsAppSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 <input required type="text" placeholder="Full Name" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0F4AA1]/50 focus:border-[#0F4AA1]" />
-                <input type="text" placeholder="Company Name" value={formData.company} onChange={e => setFormData({...formData, company: e.target.value})} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0F4AA1]/50 focus:border-[#0F4AA1]" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input required type="tel" placeholder="Phone Number" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0F4AA1]/50 focus:border-[#0F4AA1]" />

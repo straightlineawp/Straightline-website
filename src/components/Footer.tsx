@@ -68,7 +68,7 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-brand-800 text-center text-brand-400 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} Straightline AWP. All rights reserved.</p>
-          <p>Authorized Honway Dealer</p>
+          <p>Made By Ekam Singh</p>
         </div>
       </div>
     </footer>

@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `New Enquiry from Website:
-Name: ${formData.firstName} ${formData.lastName}
+Name: ${formData.name}
 Email: ${formData.email}
 Phone: ${formData.phone}
 Requirement: ${formData.message}`;
@@ -85,15 +85,9 @@ Requirement: ${formData.message}`;
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none" />
           <h3 className="text-2xl font-bold text-brand-900 mb-8 relative z-10">Send an Enquiry</h3>
           <form className="space-y-6" onSubmit={handleWhatsAppSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-brand-700 mb-2">First Name</label>
-                <input required type="text" value={formData.firstName} onChange={e => setFormData({...formData, firstName: e.target.value})} className="w-full px-4 py-3 rounded-md border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="John" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-brand-700 mb-2">Last Name</label>
-                <input type="text" value={formData.lastName} onChange={e => setFormData({...formData, lastName: e.target.value})} className="w-full px-4 py-3 rounded-md border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="Doe" />
-              </div>
+            <div>
+              <label className="block text-sm font-medium text-brand-700 mb-2">Full Name</label>
+              <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full px-4 py-3 rounded-md border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent transition-all" placeholder="John Doe" />
             </div>
             
             <div>

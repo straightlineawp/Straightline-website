@@ -161,13 +161,13 @@ const Home = () => {
               
               if (cat.slug === 'articulated-boom-lifts') {
                 desc = "Versatile lifts with up-and-over capability, perfect for complex infrastructure and maintenance tasks. Available in both diesel and electric drivetrains.";
-                spec1 = "18m - 28.8m";
-                spec2 = "Up to 300kg";
+                spec1 = "16m - 34m";
+                spec2 = "Up to 420kg";
                 spec3 = "±80°/±90°";
               } else if (cat.slug === 'telescopic-boom-lifts') {
                 desc = "Engineered for maximum horizontal reach and heavy-duty construction applications. Available in high-performance diesel or zero-emission electric variants.";
-                spec1 = "18m - 28.8m";
-                spec2 = "Up to 300kg";
+                spec1 = "16m - 34m";
+                spec2 = "Up to 420kg";
                 spec3 = "±80°/±90°";
               } else {
                 desc = "Highly stable vertical lifting platforms ideal for indoor facility management, warehousing, and smooth surface operations. Powered by clean, quiet electric motors.";
@@ -436,16 +436,12 @@ const Home = () => {
                     <span className="text-[14px] font-medium text-[#1C1C1C]">Distributorship Certificate</span>
                   </div>
                   <div className="grid grid-cols-[130px_1fr] gap-4 items-start border-b border-gray-50 pb-3">
-                    <span className="text-[12px] font-bold text-gray-400 uppercase tracking-wider">Certified Entity</span>
+                    <span className="text-[12px] font-bold text-gray-400 uppercase tracking-wider">Authorized</span>
                     <span className="text-[14px] font-medium text-[#1C1C1C]">JHK Cosmic Pvt. Ltd.</span>
                   </div>
-                  <div className="grid grid-cols-[130px_1fr] gap-4 items-start border-b border-gray-50 pb-3">
+                  <div className="grid grid-cols-[130px_1fr] gap-4 items-start">
                     <span className="text-[12px] font-bold text-gray-400 uppercase tracking-wider">Issuing Authority</span>
                     <span className="text-[14px] font-medium text-[#1C1C1C]">Honway Intelligent Manufacturing Technology Co., Ltd.</span>
-                  </div>
-                  <div className="grid grid-cols-[130px_1fr] gap-4 items-start">
-                    <span className="text-[12px] font-bold text-gray-400 uppercase tracking-wider">Date Issued</span>
-                    <span className="text-[14px] font-medium text-[#1C1C1C]">01 June 2026</span>
                   </div>
                 </div>
               </div>
