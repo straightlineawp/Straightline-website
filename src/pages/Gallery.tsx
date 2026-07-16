@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Play, X } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 import { ReactNode } from "react";
 const FadeIn = ({ children, delay = 0, className = "" }: { children: ReactNode, delay?: number, className?: string }) => {
@@ -56,7 +57,17 @@ const Gallery = () => {
   }, [selectedVideo]);
 
   return (
-    <div className="min-h-screen pt-32 pb-32 bg-brand-50 relative">
+    <div className="min-h-screen bg-brand-50 pt-24 pb-32">
+      <Helmet>
+        <title>Video Gallery | Straightline Aerial Work Platforms</title>
+        <meta name="description" content="Watch Straightline's aerial work platforms in action. View high-quality videos demonstrating our articulated boom lifts, telescopic boom lifts, and scissor lifts." />
+        <link rel="canonical" href="https://straightline.in/gallery" />
+        <meta property="og:title" content="Video Gallery | Straightline Aerial Work Platforms" />
+        <meta property="og:description" content="Watch Straightline's aerial work platforms in action. View high-quality videos demonstrating our articulated boom lifts, telescopic boom lifts, and scissor lifts." />
+        <meta property="og:url" content="https://straightline.in/gallery" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       <div className="max-w-7xl mx-auto px-4">
         <FadeIn className="mb-20 md:flex md:items-end md:justify-between">
           <div className="max-w-2xl">

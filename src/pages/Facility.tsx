@@ -1,8 +1,18 @@
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 const Facility = () => {
   return (
     <div className="min-h-screen bg-brand-950 pt-32 pb-32 text-white">
+      <Helmet>
+        <title>State of the Art Operations & Warehouse | Straightline</title>
+        <meta name="description" content="Take a look inside our New Delhi warehouse facility where every Honway lift is inspected, prepared, and dispatched for deployment across India." />
+        <link rel="canonical" href="https://straightline.in/facility" />
+        <meta property="og:title" content="State of the Art Operations & Warehouse | Straightline" />
+        <meta property="og:description" content="Take a look inside our New Delhi warehouse facility where every Honway lift is inspected, prepared, and dispatched for deployment across India." />
+        <meta property="og:url" content="https://straightline.in/facility" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 mb-20 md:flex md:items-end md:justify-between">
         <div className="max-w-2xl">
           <span className="eyebrow text-brand-400 mb-4 block">Infrastructure</span>

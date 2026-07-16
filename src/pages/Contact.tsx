@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
@@ -16,6 +17,15 @@ Requirement: ${formData.message}`;
   };
   return (
     <div className="min-h-screen bg-brand-50 pb-32">
+      <Helmet>
+        <title>Contact Straightline | Buy or Rent Aerial Work Platforms</title>
+        <meta name="description" content="Get in touch with Straightline. Whether you need to buy or rent, our team provides the best aerial work platform solutions from our New Delhi headquarters." />
+        <link rel="canonical" href="https://straightline.in/contact" />
+        <meta property="og:title" content="Contact Straightline | Buy or Rent Aerial Work Platforms" />
+        <meta property="og:description" content="Get in touch with Straightline. Whether you need to buy or rent, our team provides the best aerial work platform solutions from our New Delhi headquarters." />
+        <meta property="og:url" content="https://straightline.in/contact" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       
       {/* Visual Header */}
       <div className="relative w-full h-[450px] mb-16 flex flex-col justify-end pb-16">

@@ -6,6 +6,7 @@ import { ArrowRight, Maximize, Target, Settings, BatteryCharging, Wrench, CheckC
 import Hero from '../components/Hero';
 import { getCategories } from '../data/api';
 import specsJson from '../../straightline_honway_specs.json';
+import { Helmet } from 'react-helmet-async';
 
 import { ReactNode } from "react";
 const FadeIn = ({ children, delay = 0, className = "" }: { children: ReactNode, delay?: number, className?: string }) => {
@@ -107,6 +108,17 @@ const Home = () => {
 
   return (
     <div className="w-full">
+      <Helmet>
+        <title>Boom Lifts & Scissor Lifts India | Straightline - Honway Authorized Dealer</title>
+        <meta name="description" content="Authorized Honway Dealer in India. Straightline delivers articulated boom lifts, telescopic boom lifts, and scissor lifts designed for safety and reach." />
+        <link rel="canonical" href="https://straightline.in/" />
+        <meta property="og:title" content="Boom Lifts & Scissor Lifts India | Straightline - Honway Authorized Dealer" />
+        <meta property="og:description" content="Authorized Honway Dealer in India. Straightline delivers articulated boom lifts, telescopic boom lifts, and scissor lifts designed for safety and reach." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://straightline.in/" />
+        <meta property="og:image" content="https://straightline.in/assets/new-hero.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <Hero />
       
 

@@ -6,12 +6,22 @@ import {
   MapPin, Settings, ZoomIn, Building2, HardHat, Warehouse,
   Plane, Train, Droplet, Sun, Zap, Shield, Globe, Award, MessageCircle, X
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Honway = () => {
   const [isCertOpen, setIsCertOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
+      <Helmet>
+        <title>Official Honway Distributorship | Straightline India</title>
+        <meta name="description" content="Straightline is the official, authorized distributor for Honway aerial work platforms in India. View our dealership certification and company values." />
+        <link rel="canonical" href="https://straightline.in/honway" />
+        <meta property="og:title" content="Official Honway Distributorship | Straightline India" />
+        <meta property="og:description" content="Straightline is the official, authorized distributor for Honway aerial work platforms in India. View our dealership certification and company values." />
+        <meta property="og:url" content="https://straightline.in/honway" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       
       {/* ================= HERO SECTION ================= */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-white">

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Zap, Droplet } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { getCategoryBySlug } from '../data/api';
 import { getAssetsForSku } from '../data/assetsMap';
 
@@ -55,6 +56,15 @@ const Category = () => {
   
   return (
     <div className="min-h-screen bg-brand-50 pb-32">
+      <Helmet>
+        <title>{category.category} in India | Buy or Rent | Straightline AWP</title>
+        <meta name="description" content={`Explore our complete range of ${category.category}. Authorized Honway dealer offering high-quality lifting solutions across India.`} />
+        <link rel="canonical" href={`https://straightline.in/category/${category.slug}`} />
+        <meta property="og:title" content={`${category.category} in India | Buy or Rent | Straightline AWP`} />
+        <meta property="og:description" content={`Explore our complete range of ${category.category}. Authorized Honway dealer offering high-quality lifting solutions across India.`} />
+        <meta property="og:url" content={`https://straightline.in/category/${category.slug}`} />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="relative w-full mb-20 bg-blue-950 pt-32 pb-24 px-4 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/assets/telescopic-diesel/telescopic-diesel-3.webp" alt="Category Header" className="w-full h-full object-cover mix-blend-luminosity opacity-40" />

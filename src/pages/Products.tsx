@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Maximize, Target, BatteryCharging, Settings } from 'lucide-react';
 import { getCategories } from '../data/api';
 
@@ -42,6 +43,15 @@ const Products = () => {
 
   return (
     <div className="bg-white min-h-screen pt-[72px] lg:pt-[120px]">
+      <Helmet>
+        <title>All Equipment | Straightline Aerial Work Platforms</title>
+        <meta name="description" content="Browse our complete catalog of Honway aerial work platforms including articulated boom lifts, telescopic boom lifts, and electric scissor lifts." />
+        <link rel="canonical" href="https://straightline.in/products" />
+        <meta property="og:title" content="All Equipment | Straightline Aerial Work Platforms" />
+        <meta property="og:description" content="Browse our complete catalog of Honway aerial work platforms including articulated boom lifts, telescopic boom lifts, and electric scissor lifts." />
+        <meta property="og:url" content="https://straightline.in/products" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Hero Banner */}
       <section className="relative h-[35vh] min-h-[300px] flex items-center justify-center bg-[#1D2433] overflow-hidden">
         <div 

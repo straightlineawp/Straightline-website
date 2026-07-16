@@ -19,7 +19,7 @@ const Hero = () => {
         {/* Mobile Background Image */}
         <img 
           src="/assets/backgroung%20mobile.png" 
-          alt="Straightline Aerial Work Platforms - Mobile" 
+          alt="Straightline aerial work platforms in action" 
           className="block lg:hidden w-full h-auto object-contain object-top contrast-[1.05] translate-y-0 [clip-path:none]"
         />
         
@@ -40,10 +40,10 @@ const Hero = () => {
                 India's Reliable Partner In
               </p>
             </div>
-            <h1 className="font-barlow font-semibold uppercase text-[28px] sm:text-[34px] leading-[1.1] tracking-[0.4px] text-left m-0">
+            <div aria-hidden="true" className="font-barlow font-semibold uppercase text-[28px] sm:text-[34px] leading-[1.1] tracking-[0.4px] text-left m-0">
               <span className="block text-white">BETTER REACH.</span>
               <span className="block text-[#60A5FA]">BUILT TO TRUST.</span>
-            </h1>
+            </div>
             <p className="mt-[10px] text-[11.5px] font-[400] text-white/85 leading-[1.6] max-w-[420px]">
               Straightline delivers advanced aerial work platforms that combine safety, performance, and reliability to help you work smarter and reach higher.
             </p>

@@ -1,5 +1,6 @@
 import { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -27,7 +28,8 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <Router>
+    <HelmetProvider>
+      <Router>
       <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
         <Routes>
@@ -44,6 +46,7 @@ function App() {
         </Routes>
       </Suspense>
     </Router>
+    </HelmetProvider>
   );
 }
 

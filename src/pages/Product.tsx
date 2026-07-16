@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getProductBySku, getProductSpecs } from '../data/api';
 import { getAssetsForSku } from '../data/assetsMap';
+import { Helmet } from 'react-helmet-async';
 import { 
   MessageCircle, Play, CheckCircle2, Phone, FileText,
   Settings, Zap, Maximize2, Building2, Factory, Plane, Warehouse, ShieldCheck, Ruler, Wrench, ChevronRight, Activity, Package, HardHat
@@ -139,6 +140,21 @@ Message: ${formData.message}`;
     return <div className="h-screen flex items-center justify-center text-2xl font-bold">Product Not Found</div>;
   }
 
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": `${sku} Honway Lift`,
+    "image": [
+      `https://straightline.in/assets/${folder}/${images[0]}`
+    ],
+    "description": `Honway ${sku} model. Max working height: ${specs?.maxWorkingHeightM || product.workingHeightM || 'N/A'}m. Authorized dealer Straightline AWP in India.`,
+    "sku": sku,
+    "brand": {
+      "@type": "Brand",
+      "name": "Honway"
+    }
+  };
+
   const formatSpecKey = (key: string, isImperial: boolean) => {
     let result = key.replace(/([A-Z])/g, ' $1');
     result = result.charAt(0).toUpperCase() + result.slice(1);
@@ -218,6 +234,19 @@ Message: ${formData.message}`;
 
   return (
     <div className="min-h-screen bg-gray-50 pt-[72px] lg:pt-[100px] pb-0 relative font-sans">
+      <Helmet>
+        <title>{sku} | Honway Aerial Work Platform | Straightline</title>
+        <meta name="description" content={`Honway ${sku} model. Max working height: ${specs?.maxWorkingHeightM || product.workingHeightM || 'N/A'}m. Authorized dealer Straightline AWP.`} />
+        <link rel="canonical" href={`https://straightline.in/product/${sku}`} />
+        <meta property="og:title" content={`${sku} | Honway Aerial Work Platform | Straightline`} />
+        <meta property="og:description" content={`Honway ${sku} model. Max working height: ${specs?.maxWorkingHeightM || product.workingHeightM || 'N/A'}m. Authorized dealer Straightline AWP.`} />
+        <meta property="og:url" content={`https://straightline.in/product/${sku}`} />
+        <meta property="og:type" content="product" />
+        <meta property="og:image" content={`https://straightline.in/assets/${folder}/${images[0]}`} />
+        <script type="application/ld+json">
+          {JSON.stringify(productSchema)}
+        </script>
+      </Helmet>
       
       {/* Sticky Contact Bar (Desktop) */}
       <div className="hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col gap-2 z-40 p-2">
