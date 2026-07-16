@@ -5,8 +5,6 @@ import Layout from './components/Layout';
 const Home = lazy(() => import('./pages/Home'));
 const Category = lazy(() => import('./pages/Category'));
 const Product = lazy(() => import('./pages/Product'));
-const About = lazy(() => import('./pages/About'));
-const Partnership = lazy(() => import('./pages/Partnership'));
 const Facility = lazy(() => import('./pages/Facility'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Honway = lazy(() => import('./pages/Honway'));
@@ -35,12 +33,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
             <Route path="products" element={<Products />} />
             <Route path="category/:slug" element={<Category />} />
             <Route path="product/:sku" element={<Product />} />
             <Route path="honway" element={<Honway />} />
-            <Route path="partnership" element={<Partnership />} />
             <Route path="facility" element={<Facility />} />
             <Route path="contact" element={<Contact />} />
             <Route path="gallery" element={<Gallery />} />

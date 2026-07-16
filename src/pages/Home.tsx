@@ -87,8 +87,8 @@ const Home = () => {
           ? model.maxWorkingHeightM 
           : parseFloat(String(model.maxWorkingHeightM).split('-').pop() || '0');
         
-        // Cap at 28.8m for estimated models
-        if (model.matchType !== 'estimated' || heightVal <= 28.8) {
+        // Cap at 34m for estimated models
+        if (model.matchType !== 'estimated' || heightVal <= 34) {
           if (heightVal > maxConfirmedHeight) maxConfirmedHeight = heightVal;
         }
 
@@ -101,6 +101,9 @@ const Home = () => {
       });
     });
   });
+  
+  // Force max height to 34m as requested
+  maxConfirmedHeight = 34;
 
   return (
     <div className="w-full">

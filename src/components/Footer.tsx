@@ -36,8 +36,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Company</h4>
             <ul className="flex flex-col gap-3 text-brand-300 text-sm">
-              <li><Link to="/about" className="hover:text-brand-accent transition-colors">About Straightline</Link></li>
-              <li><Link to="/partnership" className="hover:text-brand-accent transition-colors">Honway Partnership</Link></li>
+              <li><Link to="/honway" className="hover:text-brand-accent transition-colors">About Straightline</Link></li>
+              <li><Link to="/honway" className="hover:text-brand-accent transition-colors">Honway Partnership</Link></li>
               <li><Link to="/facility" className="hover:text-brand-accent transition-colors">Our Facility</Link></li>
               <li><Link to="/contact" className="hover:text-brand-accent transition-colors">Contact Us</Link></li>
             </ul>
