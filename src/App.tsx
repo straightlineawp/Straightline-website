@@ -19,10 +19,16 @@ const PageLoader = () => (
 );
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+    // Send GA page_view event on route change
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'page_view', {
+        page_path: pathname + search
+      });
+    }
+  }, [pathname, search]);
   return null;
 };
 
