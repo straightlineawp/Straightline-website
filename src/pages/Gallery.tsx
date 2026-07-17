@@ -61,10 +61,10 @@ const Gallery = () => {
       <Helmet>
         <title>Video Gallery | Straightline Aerial Work Platforms</title>
         <meta name="description" content="Watch Straightline's aerial work platforms in action. View high-quality videos demonstrating our articulated boom lifts, telescopic boom lifts, and scissor lifts." />
-        <link rel="canonical" href="https://straightline.in/gallery" />
+        <link rel="canonical" href="https://straightlineindia.com/gallery" />
         <meta property="og:title" content="Video Gallery | Straightline Aerial Work Platforms" />
         <meta property="og:description" content="Watch Straightline's aerial work platforms in action. View high-quality videos demonstrating our articulated boom lifts, telescopic boom lifts, and scissor lifts." />
-        <meta property="og:url" content="https://straightline.in/gallery" />
+        <meta property="og:url" content="https://straightlineindia.com/gallery" />
         <meta property="og:type" content="website" />
       </Helmet>
       

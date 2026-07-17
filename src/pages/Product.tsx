@@ -145,7 +145,7 @@ Message: ${formData.message}`;
     "@type": "Product",
     "name": `${sku} Honway Lift`,
     "image": [
-      `https://straightline.in/assets/${folder}/${images[0]}`
+      `https://straightlineindia.com/assets/${folder}/${images[0]}`
     ],
     "description": `Honway ${sku} model. Max working height: ${specs?.maxWorkingHeightM || product.workingHeightM || 'N/A'}m. Authorized dealer Straightline AWP in India.`,
     "sku": sku,
@@ -237,12 +237,12 @@ Message: ${formData.message}`;
       <Helmet>
         <title>{sku} | Honway Aerial Work Platform | Straightline</title>
         <meta name="description" content={`Honway ${sku} model. Max working height: ${specs?.maxWorkingHeightM || product.workingHeightM || 'N/A'}m. Authorized dealer Straightline AWP.`} />
-        <link rel="canonical" href={`https://straightline.in/product/${sku}`} />
+        <link rel="canonical" href={`https://straightlineindia.com/product/${sku}`} />
         <meta property="og:title" content={`${sku} | Honway Aerial Work Platform | Straightline`} />
         <meta property="og:description" content={`Honway ${sku} model. Max working height: ${specs?.maxWorkingHeightM || product.workingHeightM || 'N/A'}m. Authorized dealer Straightline AWP.`} />
-        <meta property="og:url" content={`https://straightline.in/product/${sku}`} />
+        <meta property="og:url" content={`https://straightlineindia.com/product/${sku}`} />
         <meta property="og:type" content="product" />
-        <meta property="og:image" content={`https://straightline.in/assets/${folder}/${images[0]}`} />
+        <meta property="og:image" content={`https://straightlineindia.com/assets/${folder}/${images[0]}`} />
         <script type="application/ld+json">
           {JSON.stringify(productSchema)}
         </script>
@@ -252,7 +252,7 @@ Message: ${formData.message}`;
       <div className="hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col gap-2 z-40 p-2">
         <a href="https://wa.me/919811803530" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white p-3 rounded-l-lg shadow-lg hover:pr-6 transition-all flex items-center gap-2 group"><MessageCircle size={20}/><span className="hidden group-hover:inline whitespace-nowrap font-bold text-sm ml-2">WhatsApp</span></a>
         <a href="tel:+919811803530" className="bg-[#0F4AA1] text-white p-3 rounded-l-lg shadow-lg hover:pr-6 transition-all flex items-center gap-2 group"><Phone size={20}/><span className="hidden group-hover:inline whitespace-nowrap font-bold text-sm ml-2">Call Now</span></a>
-        <a href="mailto:sales@straightline.in" className="bg-[#1D2433] text-white p-3 rounded-l-lg shadow-lg hover:pr-6 transition-all flex items-center gap-2 group"><FileText size={20}/><span className="hidden group-hover:inline whitespace-nowrap font-bold text-sm ml-2">Email Us</span></a>
+        <a href="mailto:sales@straightlineindia.com" className="bg-[#1D2433] text-white p-3 rounded-l-lg shadow-lg hover:pr-6 transition-all flex items-center gap-2 group"><FileText size={20}/><span className="hidden group-hover:inline whitespace-nowrap font-bold text-sm ml-2">Email Us</span></a>
       </div>
 
       {/* Breadcrumb */}

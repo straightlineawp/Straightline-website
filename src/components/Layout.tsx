@@ -12,8 +12,8 @@ const Layout = () => {
             "@context": "https://schema.org",
             "@type": ["Organization", "LocalBusiness"],
             "name": "Straightline (JHK Cosmic Pvt. Ltd.)",
-            "url": "https://straightline.in",
-            "logo": "https://straightline.in/assets/straight-line-logo.webp",
+            "url": "https://straightlineindia.com",
+            "logo": "https://straightlineindia.com/assets/straight-line-logo.webp",
             "telephone": "+91-9811803530",
             "address": {
               "@type": "PostalAddress",

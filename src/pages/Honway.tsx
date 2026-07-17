@@ -16,10 +16,10 @@ const Honway = () => {
       <Helmet>
         <title>Official Honway Distributorship | Straightline India</title>
         <meta name="description" content="Straightline is the official, authorized distributor for Honway aerial work platforms in India. View our dealership certification and company values." />
-        <link rel="canonical" href="https://straightline.in/honway" />
+        <link rel="canonical" href="https://straightlineindia.com/honway" />
         <meta property="og:title" content="Official Honway Distributorship | Straightline India" />
         <meta property="og:description" content="Straightline is the official, authorized distributor for Honway aerial work platforms in India. View our dealership certification and company values." />
-        <meta property="og:url" content="https://straightline.in/honway" />
+        <meta property="og:url" content="https://straightlineindia.com/honway" />
         <meta property="og:type" content="website" />
       </Helmet>
       

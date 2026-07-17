@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOMAIN = 'https://straightline.in';
+const DOMAIN = 'https://straightlineindia.com';
 
 const staticRoutes = [
   '/',

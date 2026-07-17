@@ -59,10 +59,10 @@ const Category = () => {
       <Helmet>
         <title>{category.category} in India | Buy or Rent | Straightline AWP</title>
         <meta name="description" content={`Explore our complete range of ${category.category}. Authorized Honway dealer offering high-quality lifting solutions across India.`} />
-        <link rel="canonical" href={`https://straightline.in/category/${category.slug}`} />
+        <link rel="canonical" href={`https://straightlineindia.com/category/${category.slug}`} />
         <meta property="og:title" content={`${category.category} in India | Buy or Rent | Straightline AWP`} />
         <meta property="og:description" content={`Explore our complete range of ${category.category}. Authorized Honway dealer offering high-quality lifting solutions across India.`} />
-        <meta property="og:url" content={`https://straightline.in/category/${category.slug}`} />
+        <meta property="og:url" content={`https://straightlineindia.com/category/${category.slug}`} />
         <meta property="og:type" content="website" />
       </Helmet>
       <div className="relative w-full mb-20 bg-blue-950 pt-32 pb-24 px-4 overflow-hidden">

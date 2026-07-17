@@ -46,10 +46,10 @@ const Products = () => {
       <Helmet>
         <title>All Equipment | Straightline Aerial Work Platforms</title>
         <meta name="description" content="Browse our complete catalog of Honway aerial work platforms including articulated boom lifts, telescopic boom lifts, and electric scissor lifts." />
-        <link rel="canonical" href="https://straightline.in/products" />
+        <link rel="canonical" href="https://straightlineindia.com/products" />
         <meta property="og:title" content="All Equipment | Straightline Aerial Work Platforms" />
         <meta property="og:description" content="Browse our complete catalog of Honway aerial work platforms including articulated boom lifts, telescopic boom lifts, and electric scissor lifts." />
-        <meta property="og:url" content="https://straightline.in/products" />
+        <meta property="og:url" content="https://straightlineindia.com/products" />
         <meta property="og:type" content="website" />
       </Helmet>
       {/* Hero Banner */}

@@ -7,10 +7,10 @@ const Facility = () => {
       <Helmet>
         <title>State of the Art Operations & Warehouse | Straightline</title>
         <meta name="description" content="Take a look inside our New Delhi warehouse facility where every Honway lift is inspected, prepared, and dispatched for deployment across India." />
-        <link rel="canonical" href="https://straightline.in/facility" />
+        <link rel="canonical" href="https://straightlineindia.com/facility" />
         <meta property="og:title" content="State of the Art Operations & Warehouse | Straightline" />
         <meta property="og:description" content="Take a look inside our New Delhi warehouse facility where every Honway lift is inspected, prepared, and dispatched for deployment across India." />
-        <meta property="og:url" content="https://straightline.in/facility" />
+        <meta property="og:url" content="https://straightlineindia.com/facility" />
         <meta property="og:type" content="website" />
       </Helmet>
       <div className="max-w-7xl mx-auto px-4 mb-20 md:flex md:items-end md:justify-between">

@@ -103,20 +103,20 @@ const Home = () => {
     });
   });
   
-  // Force max height to 34m as requested
-  maxConfirmedHeight = 34;
+  // Force max height to 52m as requested
+  maxConfirmedHeight = 52;
 
   return (
     <div className="w-full">
       <Helmet>
         <title>Boom Lifts & Scissor Lifts India | Straightline - Honway Authorized Dealer</title>
         <meta name="description" content="Authorized Honway Dealer in India. Straightline delivers articulated boom lifts, telescopic boom lifts, and scissor lifts designed for safety and reach." />
-        <link rel="canonical" href="https://straightline.in/" />
+        <link rel="canonical" href="https://straightlineindia.com/" />
         <meta property="og:title" content="Boom Lifts & Scissor Lifts India | Straightline - Honway Authorized Dealer" />
         <meta property="og:description" content="Authorized Honway Dealer in India. Straightline delivers articulated boom lifts, telescopic boom lifts, and scissor lifts designed for safety and reach." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://straightline.in/" />
-        <meta property="og:image" content="https://straightline.in/assets/new-hero.jpg" />
+        <meta property="og:url" content="https://straightlineindia.com/" />
+        <meta property="og:image" content="https://straightlineindia.com/assets/new-hero.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Hero />
